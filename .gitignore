@@ -1,5 +1,7 @@
 /.project
 /.classpath
-target/
-.settings/
 /.springBeans
+/goorm.manifest
+target/
+node_modules/
+.settings/
