@@ -9,10 +9,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@Controller("HomeController")
-public class HomeController {
+@Controller
+public class CommonController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	private static final Logger logger = LoggerFactory.getLogger(CommonController.class);
     
     @RequestMapping(value = "/index.do", method = RequestMethod.GET)
 	public String index(Locale locale, Model model) {
