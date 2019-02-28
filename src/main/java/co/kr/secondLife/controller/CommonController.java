@@ -18,5 +18,10 @@ public class CommonController {
 	public String index(Locale locale, Model model) {
 		return "index";
 	}
+    
+    @RequestMapping(value = "/join.do", method = RequestMethod.GET)
+    public String join(Locale locale, Model model) {
+    	return "join";
+    }
 	
 }
