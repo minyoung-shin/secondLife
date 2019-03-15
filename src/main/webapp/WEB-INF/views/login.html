@@ -2,12 +2,26 @@
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 	layout:decorator="layout/layout">
-<!-- ì‚¬ìš©ìž CSS ì¶”ê°€ -->
 <th:block layout:fragment="css">
 </th:block>
-
-<!-- ì‚¬ìš©ìž ìŠ¤í¬ë¦½íŠ¸ ì¶”ê°€ -->
 <th:block layout:fragment="script">
+<script>
+	function selectMember() {
+		var result = true;
+
+		if($("input[name=email]").val() == "") {
+			alert("ID¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+			form.id.focus();
+			result = false;
+		} else if($("input[name=pwd]").val() == "") {
+			alert("ºñ¹Ð¹øÈ£¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+			form.pwd.focus();
+			result = false;
+		}
+		
+		return result;
+	}
+</script>
 </th:block>
 
 <div layout:fragment="content">
@@ -16,19 +30,19 @@
 			<a href="#"><b>SECOND LIFE</b></a>
 		</div>
 	  	<div class="login-box-body">
-			<form action="#" method="post">
+			<form action="/review/review.do" method="post" onsubmit="return selectMember();" name="form">
 				<div class="form-group has-feedback">
-					<input type="email" class="form-control" placeholder="Email"/>
+					<input type="email" class="form-control" placeholder="Email" name="email"/>
 					<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 				</div>
 				<div class="form-group has-feedback">
-					<input type="password" class="form-control" placeholder="Password"/>
+					<input type="password" class="form-control" placeholder="Password" name="pwd"/>
 					<span class="glyphicon glyphicon-lock form-control-feedback"></span>
 				</div>
 			  	<div class="row">
 				    <div class="col-xs-12 text-right">
 				    	<button type="button" class="btn btn-default btn-block btn-flat" onclick="location.href='join.do'">Join</button>
-				    	<button type="submit" class="btn btn-danger btn-block btn-flat" >Login</button>
+				    	<button type="submit" class="btn btn-danger btn-block btn-flat">Login</button>
 				    </div>
 				</div>
 			</form>

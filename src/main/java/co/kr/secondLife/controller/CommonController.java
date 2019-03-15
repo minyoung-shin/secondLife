@@ -14,14 +14,14 @@ public class CommonController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(CommonController.class);
     
-    @RequestMapping(value = "/index.do", method = RequestMethod.GET)
+    @RequestMapping(value = "/login.do", method = RequestMethod.GET)
 	public String index(Locale locale, Model model) {
-		return "index";
+		return "login";
 	}
     
     @RequestMapping(value = "/join.do", method = RequestMethod.GET)
     public String join(Locale locale, Model model) {
     	return "join";
     }
-	
+    
 }
