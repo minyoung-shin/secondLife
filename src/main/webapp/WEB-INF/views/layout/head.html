@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head th:fragment="headFragment">
+	<meta charset="UTF-8" />
+	<!-- 공통 css -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/css/AdminLTE.min.css"/>
+	<link rel="stylesheet" href="/css/jAlert.css"/>
+	<link rel="stylesheet" href="/css/common.css"/>
+	<!-- 사용자 CSS -->
+	<th:block layout:fragment="css"></th:block>
+	<!-- 공통 script -->
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/jAlert.min.js"></script>
+	<script type="text/javascript" src="/js/jAlert-functions.min.js"></script>
+	<!-- 사용자 script -->
+	<th:block layout:fragment="script"></th:block>
+</head>
+</html>
