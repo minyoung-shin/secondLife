@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/*** header.html ******************************/
+.navbar {
+	background-color: #d33724; 
+	border-radius: 0px;
+}
+.navbar a {
+	color: #fff;
+}
