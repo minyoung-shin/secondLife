@@ -41,4 +41,12 @@ public class CommonController {
     	return map;
     }
     
+    @RequestMapping(value = "/selectUser", method = RequestMethod.POST)
+    @ResponseBody
+    public HashMap<String, Object> selectUser(Locale locale, Model model, UserVO vo) throws Exception {
+    	HashMap<String, Object> map = new HashMap<String, Object>();
+    	map.put("result", commonService.selectUser(vo));
+    	return map;
+    }
+    
 }

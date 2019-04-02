@@ -9,6 +9,9 @@
 		SELECT count(id)
 		  FROM USER
 		 WHERE id = #{id}
+		 <if test="pwd2 == null">
+		 	AND pwd = #{pwd}
+		 </if>
 	</select>
 	
 	<insert id="insertUser" parameterType="UserVO">

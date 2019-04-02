@@ -22,4 +22,9 @@ public class CommonServiceImpl implements CommonService {
 		return result;
 	}
 
+	@Override
+	public int selectUser(UserVO param) throws Exception {
+		return common.selectUser(param);
+	}
+
 }

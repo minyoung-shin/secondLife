@@ -5,5 +5,6 @@ import co.kr.secondLife.vo.UserVO;
 public interface CommonService {
 
 	public int insertUser(UserVO param) throws Exception;
+	public int selectUser(UserVO param) throws Exception;
 	
 }
