@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="co.kr.secondLife.dao.CommonDao">
+
+	<select id="selectUser" parameterType="UserVO" resultType="int">
+		SELECT count(id)
+		  FROM USER
+		 WHERE id = #{id}
+	</select>
+	
+	<insert id="insertUser" parameterType="UserVO">
+		INSERT INTO USER(ID, PWD)
+		VALUES(
+			#{id}
+			, #{pwd}
+		)
+	</insert>
+	
+</mapper>
