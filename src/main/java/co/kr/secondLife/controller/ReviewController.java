@@ -14,10 +14,14 @@ public class ReviewController {
 
 	private static final Logger logger = LoggerFactory.getLogger(ReviewController.class);
     
-	@RequestMapping(value = "/review/review.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/review/list", method = RequestMethod.GET)
     public String review(Locale locale, Model model) throws Exception {
-    	System.out.println("aaaaa");
-    	return "review/review";
+    	return "review/list";
     }
+	
+	@RequestMapping(value = "/review/write", method = RequestMethod.GET)
+	public String write(Locale locale, Model model) throws Exception {
+		return "review/write";
+	}
 	
 }
