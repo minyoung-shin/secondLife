@@ -28,11 +28,10 @@
 							alert("로그인 정보를 다시 확인해 주세요");
 						} else {
 							$.jAlert({
-					    		'title': 'SECOND LIFE',
+					    		'title': '',
 					            'content': '환영합니다! '+ $("input[name=id]").val() +'님',
-					            'theme': 'dark_red',
 					            'onClose': function() {
-					            	location.href="/review/review.do";
+					            	location.href="/review/list.do";
 					            }
 					    	});
 						}
