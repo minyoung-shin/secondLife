@@ -1,0 +1,1 @@
+$.fn.jAlert.defaults.closeOnClick = 'flase';
