@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+/* 공통 */
+.footer {
+	margin-bottom: 50px;
+}
+
 /* header.html */
 .navbar {
 	background-color: #d33724; 
